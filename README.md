@@ -22,9 +22,9 @@ This repo is a **notebook-first** reference implementation to train, evaluate, a
 ├── 04_evaluate_metrics_latency.ipynb
 ├── 05_export_upload_artifacts.ipynb
 ├── 06_gradio_demo_upload_predict.ipynb
-├── data/                # (optional) local staging area (NOT for git)
-├── outputs/             # (optional) local analysis outputs (NOT for git)
-└── runs/                # YOLO training outputs (NOT for git)
+├── data/                # (optional) local staging area 
+├── outputs/             # (optional) local analysis outputs 
+└── runs/                # YOLO training outputs 
 ```
 
 ## Notebooks (recommended order)
@@ -74,14 +74,6 @@ For YOLOv8 classification, heavy preprocessing is usually **not required**:
 - YOLO applies resizing and augmentation internally during training.
 - If images are extremely large, the best practice is to set an appropriate `imgsz` (e.g., 224/320) and let the trainer handle resizing.
 - Optional: run a one-time image integrity check (corrupt files) and remove duplicates.
-
-## What NOT to commit
-Do **not** push these to Git:
-- `data/` (raw images)
-- `outputs/` (generated local artifacts)
-- `runs/` (training runs can be large)
-- `*.pt`, `*.onnx` if they are large and/or customer-sensitive (use Git LFS if needed)
-- `core.*` crash dumps
 
 ## Author
 Cristina Varas Menadas
